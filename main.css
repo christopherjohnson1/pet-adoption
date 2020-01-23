@@ -1,10 +1,12 @@
 body {
-    background-color: burlywood;
+    background-color: rgb(128, 142, 155);
 }
 
 #pet-barn {
     display: flex;
-    flex-direction: wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-around;
 }
 
 .cat {
@@ -12,6 +14,7 @@ body {
     margin: 5px;
     text-align: center;
     padding: 5px;
+    background-color: #CFD8DC;
 }
 
 .dino {
@@ -19,6 +22,7 @@ body {
     margin: 5px;
     text-align: center;
     padding: 5px;
+    background-color: #CFD8DC;
 }
 
 .dog {
@@ -26,4 +30,26 @@ body {
     margin: 5px;
     text-align: center;
     padding: 5px;
+    background-color: #CFD8DC;
+}
+
+.dino-type, .dino-button {
+    background-color: lightgreen;
+}
+
+.cat-type, .cat-button {
+    background-color: lightblue;
+}
+
+.dog-type, .dog-button {
+    background-color: brown;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
 }
