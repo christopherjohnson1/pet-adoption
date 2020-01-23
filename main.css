@@ -2,3 +2,28 @@ body {
     background-color: burlywood;
 }
 
+#pet-barn {
+    display: flex;
+    flex-direction: wrap;
+}
+
+.cat {
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+.dino {
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+.dog {
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+}
