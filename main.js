@@ -11,7 +11,7 @@ const pets = [
     {
       name: "Trouble",
       color: "Poop-Colored",
-      specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
+      specialSkill: "Likes to pull tomatoes off of sandwhich.",
       type: "dino",
       imageUrl: "http://www.jozilife.co.za/wp-content/uploads/The-Dino-Expo.jpg"
     },
@@ -225,15 +225,15 @@ const buildPetCards = () => {
        if (pets[i].type === "cat") {
         domString += '<div class="cat">';
         domString += `<h1>${pets[i].name}</h1>`
-        domString += `<img src=${pets[i].imageUrl} alt="${pets[i].type}">`;
+        domString += `<img class='img' src=${pets[i].imageUrl} alt="${pets[i].type}">`;
         domString += `<p>${pets[i].color}</p>`
         domString += `<p>${pets[i].specialSkill}</p>`
         domString += `<h3 class="cat-type">${pets[i].type}</h3>`;
         domString += '</div>';
     } else if (pets[i].type === "dino") {
-        domString += '<div class="cat">';
+        domString += '<div class="dino">';
         domString += `<h1>${pets[i].name}</h1>`
-        domString += `<img src=${pets[i].imageUrl} alt="${pets[i].type}">`;
+        domString += `<img class='img' src=${pets[i].imageUrl} alt="${pets[i].type}">`;
         domString += `<p>${pets[i].color}</p>`
         domString += `<p>${pets[i].specialSkill}</p>`
         domString += `<h3 class="dino-type">${pets[i].type}</h3>`;
@@ -241,7 +241,7 @@ const buildPetCards = () => {
     } else {
         domString += '<div class="dog">';
         domString += `<h1>${pets[i].name}</h1>`
-        domString += `<img src=${pets[i].imageUrl} alt="${pets[i].type}">`;
+        domString += `<img class='img' src=${pets[i].imageUrl} alt="${pets[i].type}">`;
         domString += `<p>${pets[i].color}</p>`
         domString += `<p>${pets[i].specialSkill}</p>`
         domString += `<h3 class="dog-type">${pets[i].type}</h3>`;
