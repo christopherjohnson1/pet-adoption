@@ -224,26 +224,26 @@ const buildPetCards = () => {
     for(let i = 0; i < pets.length; i++) 
        if (pets[i].type === "cat") {
         domString += '<div class="cat">';
-        domString += `<h1>${pets[i].name}</h1>`
+        domString += `<h1 class='name'>${pets[i].name}</h1>`
         domString += `<img class='img' src=${pets[i].imageUrl} alt="${pets[i].type}">`;
-        domString += `<p>${pets[i].color}</p>`
-        domString += `<p>${pets[i].specialSkill}</p>`
+        domString += `<p class='pet-color'>${pets[i].color}</p>`
+        domString += `<p class='pet-skill'>${pets[i].specialSkill}</p>`
         domString += `<h3 class="cat-type">${pets[i].type}</h3>`;
         domString += '</div>';
     } else if (pets[i].type === "dino") {
         domString += '<div class="dino">';
-        domString += `<h1>${pets[i].name}</h1>`
+        domString += `<h1 class='name'>${pets[i].name}</h1>`
         domString += `<img class='img' src=${pets[i].imageUrl} alt="${pets[i].type}">`;
-        domString += `<p>${pets[i].color}</p>`
-        domString += `<p>${pets[i].specialSkill}</p>`
+        domString += `<p class='pet-color'>${pets[i].color}</p>`
+        domString += `<p class='pet-skill'>${pets[i].specialSkill}</p>`
         domString += `<h3 class="dino-type">${pets[i].type}</h3>`;
         domString += '</div>';
     } else {
         domString += '<div class="dog">';
-        domString += `<h1>${pets[i].name}</h1>`
+        domString += `<h1 class='name'>${pets[i].name}</h1>`
         domString += `<img class='img' src=${pets[i].imageUrl} alt="${pets[i].type}">`;
-        domString += `<p>${pets[i].color}</p>`
-        domString += `<p>${pets[i].specialSkill}</p>`
+        domString += `<p class='pet-color'>${pets[i].color}</p>`
+        domString += `<p class='pet-skill'>${pets[i].specialSkill}</p>`
         domString += `<h3 class="dog-type">${pets[i].type}</h3>`;
         domString += '</div>';
     }
