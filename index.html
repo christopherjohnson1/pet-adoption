@@ -9,10 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <button class='cat-button'>Cat</button>
-        <button class='dog-button'>Dog</button>
-        <button class='dino-button'>Dino</button>
+    <header id='myBtnContainer'>
+        <button class='cat-button' onclick="filterSelection('cat')">Cat</button>
+        <button class='dog-button' onclick="filterSelection('dog')">Dog</button>
+        <button class='dino-button' onclick="filterSelection('dino')">Dino</button>
+        <button class='showAll-button' onclick="filterSelection('all')">All</button>
     </header>
     <h1>Pet Adoption</h1>
     <main>
