@@ -1,3 +1,5 @@
+/* My terrible CSS styling */
+
 body {
     background-color: rgb(128, 142, 155);
     font-family: 'ZCOOL QingKe HuangYou', cursive;
@@ -17,6 +19,7 @@ body {
     padding: 5px;
     background-color: #CFD8DC;
     border-radius: 10px;
+    width: 30%;
 }
 
 .dino {
@@ -26,6 +29,7 @@ body {
     padding: 5px;
     background-color: #CFD8DC;
     border-radius: 10px;
+    width: 30%;
 }
 
 .dog {
@@ -35,19 +39,20 @@ body {
     padding: 5px;
     background-color: #CFD8DC;
     border-radius: 10px;
+    width: 30%;
 }
 
-.dino-type, .dino-button {
+.dino-type, #dino {
     background-color: lightgreen;
     border-radius: 10px;
 }
 
-.cat-type, .cat-button {
+.cat-type, #cat {
     background-color: lightblue;
     border-radius: 10px;
 }
 
-.dog-type, .dog-button {
+.dog-type, #dog {
     background-color: brown;
     border-radius: 10px;
 }
@@ -62,7 +67,7 @@ header {
     justify-content: center;
 }
 
-.dino-button, .dog-button, .cat-button, .showAll-button {
+#dino, #dog, #cat, #All {
     padding: 20px;
     padding-left: 40px;
     padding-right: 40px;
@@ -73,7 +78,7 @@ header {
     border-radius: 10px;
 }
 
-.dino-button:hover, .dog-button:hover, .cat-button:hover, .showAll-button:hover {
+#dino:hover, #dog:hover, #cat:hover, #All:hover {
     background-color: #ddd;
 }
 
@@ -89,7 +94,7 @@ header {
     border-radius: 10px;
 }
 
-.showAll-button {
+#All {
     padding: 20px;
     padding-left: 40px;
     padding-right: 40px;

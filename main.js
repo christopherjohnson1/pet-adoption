@@ -1,5 +1,3 @@
-console.log('PET ADOPTION');
-
 const pets = [
     {
       name: "Dusty",
@@ -213,42 +211,74 @@ const pets = [
     }
   ];
 
-
-  const printToDom = (divId, textToPrint) => {
+// standard printToDom function we will be using
+  const printToDom = (divId, textToPrint) => { 
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = textToPrint;
 };
 
-const buildPetCards = () => {
+// function will expect array - I need to refactor, but i'm lazy
+const buildPetCards = (monkeybuttArray) => { 
     let domString = '';
-    for(let i = 0; i < pets.length; i++) 
-       if (pets[i].type === "cat") {
+    for(let i = 0; i < monkeybuttArray.length; i++) 
+       if (monkeybuttArray[i].type === "cat") {
         domString += '<div class="cat">';
-        domString += `<h1 class='name'>${pets[i].name}</h1>`
-        domString += `<img class='img' src=${pets[i].imageUrl} alt="${pets[i].type}">`;
-        domString += `<p class='pet-color'>${pets[i].color}</p>`
-        domString += `<p class='pet-skill'>${pets[i].specialSkill}</p>`
-        domString += `<h3 class="cat-type">${pets[i].type}</h3>`;
+        domString += `<h1 class='name'>${monkeybuttArray[i].name}</h1>`
+        domString += `<img class='img' src=${monkeybuttArray[i].imageUrl} alt="${monkeybuttArray[i].type}">`;
+        domString += `<p class='pet-color'>${monkeybuttArray[i].color}</p>`
+        domString += `<p class='pet-skill'>${monkeybuttArray[i].specialSkill}</p>`
+        domString += `<h3 class="cat-type">${monkeybuttArray[i].type}</h3>`;
         domString += '</div>';
-    } else if (pets[i].type === "dino") {
+    } else if (monkeybuttArray[i].type === "dino") {
         domString += '<div class="dino">';
-        domString += `<h1 class='name'>${pets[i].name}</h1>`
-        domString += `<img class='img' src=${pets[i].imageUrl} alt="${pets[i].type}">`;
-        domString += `<p class='pet-color'>${pets[i].color}</p>`
-        domString += `<p class='pet-skill'>${pets[i].specialSkill}</p>`
-        domString += `<h3 class="dino-type">${pets[i].type}</h3>`;
+        domString += `<h1 class='name'>${monkeybuttArray[i].name}</h1>`
+        domString += `<img class='img' src=${monkeybuttArray[i].imageUrl} alt="${monkeybuttArray[i].type}">`;
+        domString += `<p class='pet-color'>${monkeybuttArray[i].color}</p>`
+        domString += `<p class='pet-skill'>${monkeybuttArray[i].specialSkill}</p>`
+        domString += `<h3 class="dino-type">${monkeybuttArray[i].type}</h3>`;
         domString += '</div>';
     } else {
         domString += '<div class="dog">';
-        domString += `<h1 class='name'>${pets[i].name}</h1>`
-        domString += `<img class='img' src=${pets[i].imageUrl} alt="${pets[i].type}">`;
-        domString += `<p class='pet-color'>${pets[i].color}</p>`
-        domString += `<p class='pet-skill'>${pets[i].specialSkill}</p>`
-        domString += `<h3 class="dog-type">${pets[i].type}</h3>`;
+        domString += `<h1 class='name'>${monkeybuttArray[i].name}</h1>`
+        domString += `<img class='img' src=${monkeybuttArray[i].imageUrl} alt="${monkeybuttArray[i].type}">`;
+        domString += `<p class='pet-color'>${monkeybuttArray[i].color}</p>`
+        domString += `<p class='pet-skill'>${monkeybuttArray[i].specialSkill}</p>`
+        domString += `<h3 class="dog-type">${monkeybuttArray[i].type}</h3>`;
         domString += '</div>';
     }
     printToDom('pet-barn', domString);
     
 };
 
-buildPetCards();
+// below is the function that is called by 'click' event listener to display filtered content
+const findMyPets = (e) => {  
+  const buttonId = e.target.id; //e.target.id = the id of button assigned in html
+  if(buttonId === 'All'){
+      buildPetCards(pets);
+  } else {
+  const myPets = [];
+  for(let i = 0; i < pets.length; i++) {
+      if(pets[i].type === buttonId){
+          myPets.push(pets[i]);
+      }
+  }
+  
+  buildPetCards(myPets);
+  }
+}
+
+const events = () => {
+  document.getElementById('cat').addEventListener('click', findMyPets); // filters content by pet type
+  document.getElementById('dog').addEventListener('click', findMyPets); // filters content by pet type
+  document.getElementById('dino').addEventListener('click', findMyPets); // filters content by pet type
+  document.getElementById('All').addEventListener('click', findMyPets); // filters content by pet type
+}
+
+// we will be expected to format our pages like this from now on instead of having random function calls in code
+const init = () => {
+  buildPetCards(pets);
+  events();
+};
+
+// builds page
+init();
