@@ -11,4 +11,4 @@ We used bootstrap cards and buttons. You can click the button at the top of the 
 1. Clone down this repo
 1. Make ure you have http-server installed via npm. If not get it [here](https://www.npmjs.com/package/http-server)
 1. On your command line, run `hs -p 9999`
-1. In your browser go to `http://localhost:8080`
+1. In your browser go to `http://localhost:9999`
